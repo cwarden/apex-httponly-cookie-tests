@@ -1,0 +1,28 @@
+<apex:page controller="RestTestController" tabStyle="Contact">
+	<apex:pageBlock >
+		<apex:pageBlockSection title="One Cookie, No HttpOnly">
+			<apex:pageBlockTable value="{!oneCookieNoHttpOnly}" var="currentHeader">
+				<apex:column value="{!currentHeader.headerName}" headerValue="Response - Header Name"/>
+				<apex:column value="{!currentHeader.headerValue}" headerValue="Values"/>
+			</apex:pageBlockTable>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection title="One Cookie, HttpOnly">
+			<apex:pageBlockTable value="{!oneCookieHttpOnly}" var="currentHeader">
+				<apex:column value="{!currentHeader.headerName}" headerValue="Response - Header Name"/>
+				<apex:column value="{!currentHeader.headerValue}" headerValue="Values"/>
+			</apex:pageBlockTable>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection title="Two Cookies, No HttpOnly">
+			<apex:pageBlockTable value="{!twoCookieNoHttpOnly}" var="currentHeader">
+				<apex:column value="{!currentHeader.headerName}" headerValue="Response - Header Name"/>
+				<apex:column value="{!currentHeader.headerValue}" headerValue="Values"/>
+			</apex:pageBlockTable>
+		</apex:pageBlockSection>
+		<apex:pageBlockSection title="Two Cookies, HttpOnly">
+			<apex:pageBlockTable value="{!twoCookieHttpOnly}" var="currentHeader">
+				<apex:column value="{!currentHeader.headerName}" headerValue="Response - Header Name"/>
+				<apex:column value="{!currentHeader.headerValue}" headerValue="Values"/>
+			</apex:pageBlockTable>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+</apex:page>
